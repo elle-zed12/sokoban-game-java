@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Sokoban</string>
+    <string name="startingLevel">Level: 0</string>
+    <string name="levelName">Level name: 0</string>
+    <string name="targetCount">Target Count: 0</string>
+    <string name="up">Up</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="down">Down</string>
+    <string name="move_counter">Move counter: 0</string>
+    <string name="NumOfTarget">Num of Target:</string>
+    <string name="board_game">Board Game</string>
+    <string name="crates_on_target_0">Crates on target:0</string>
+    <string name="game_done_msg">Game is completed</string>
+    <string name="level_1">Level 1</string>
+    <string name="level_2">Level 2</string>
+    <string name="level_3">Level 3</string>
+    <string name="level_4">Level 4</string>
+    <string name="sound">Sound</string>
+    <string name="off">off</string>
+    <string name="on">on</string>
+    <string name="sound_on">Sound on</string>
+    <string name="sound_off">Sound off</string>
+    <string name="cratesr_on_target">Crates on Target:</string>
+    <string name="restart">Restart</string>
+</resources>

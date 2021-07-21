@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021">
+
+
+        <TextView
+            android:id="@+id/levelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/levelName"
+            android:textColor="@color/darkerBlue"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/targetCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/levelName"
+            android:layout_marginTop="-6dp"
+            android:text="@string/targetCount"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/upBtn"
+        android:layout_width="69dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="424dp"
+        android:onClick="moveUp"
+        android:text="@string/up"
+        app:layout_constraintBottom_toTopOf="@+id/downBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861" />
+
+    <Button
+        android:id="@+id/leftBtn"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:onClick="moveLeft"
+        android:text="@string/left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rightBtn"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
+
+    <Button
+        android:id="@+id/rightBtn"
+        android:layout_width="71dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="100dp"
+        android:onClick="moveRight"
+        android:text="@string/right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915" />
+
+    <Button
+        android:id="@+id/downBtn"
+        android:layout_width="68dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="moveDown"
+        android:text="@string/down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/crates_on_target"
+        android:layout_width="237dp"
+        android:layout_height="44dp"
+        android:text="@string/crates_on_target_0"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/level_1"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/blue"
+        android:onClick="setLevel1"
+        android:text="@string/level_1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/level_2"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/lightBlue"
+        android:onClick="setLevel2"
+        android:text="@string/level_2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/level_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/level_3"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/darkerBlue"
+        android:onClick="setLevel3"
+        android:text="@string/level_3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/level_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/level_4"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/lighterBlue"
+        android:onClick="setLevel4"
+        android:text="@string/level_4"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/level_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TableLayout
+        android:id="@+id/board_image"
+        android:layout_width="268dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crates_on_target">
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/moveCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/move_counter"
+        android:textColor="@color/darkerBlue"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/upBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board_image"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <Button
+        android:id="@+id/musicSwitch"
+        android:layout_width="110dp"
+        android:layout_height="39dp"
+        android:background="@color/skyBlue"
+        android:onClick="toggleMusic"
+        android:text="@string/sound"
+        app:layout_constraintBottom_toTopOf="@+id/board_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crates_on_target"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="110dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="84dp"
+        android:background="@color/skyBlue"
+        android:onClick="restart"
+        android:text="@string/restart"
+        app:layout_constraintBottom_toTopOf="@+id/board_image"
+        app:layout_constraintEnd_toStartOf="@+id/musicSwitch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crates_on_target"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
